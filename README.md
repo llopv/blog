@@ -1,22 +1,43 @@
 # IPFS Blog
 
-This is the source repository for the [IPFS Blog](http://ipfs.io/blog).
+[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
+[![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+> Source for the [IPFS Blog](http://ipfs.io/blog)
 
 ![](https://www.evernote.com/l/AMaEbN3YfmVC-JDtlxRdFnMMbfvQjQlmU9MB/image.png)
 
-## Editing
+## Table of Contents
 
-1. [install node + npm](http://iojs.org) and required modules
+- [Install](#install)
+- [Usage](#usage)
+  - [Creating a Post](#creating-a-post)
+  - [Live editing](#live-editing)
+  - [Theme](#theme)
+- [Publishing Post](#publishing-post)
+  - [Editing](#editing)
+  - [Publishing](#publishing)
+- [Contribute](#contribute)
+  - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
+- [License](#license)
 
-    ```sh
-    npm install
-    ```
+## Install
 
-2. run build
+1. [Install node + npm](http://iojs.org) and required modules.
 
-    ```sh
-    node build.js
-    ```
+```sh
+npm install
+```
+
+2. Run build.
+
+```sh
+node build.js
+```
+
+## Usage
 
 ### Creating a Post
 
@@ -39,11 +60,19 @@ make build
 
 This should setup a server. For now, it screws up the styling because the styles are pulled from ipfs directly. (FIXME, should put the styles in the build dir.) Just kill it when you're ready to publish
 
-### Publishing Post
+### Theme
 
-How to publish the blog on IPFS.io
+The layouts follow [the example viewer](https://github.com/ipfs/examples/tree/master/webapps/example-viewer). Modify the files inside
 
-#### Editing
+```
+tmpl/
+```
+
+## Publishing Post
+
+How to publish the blog on IPFS.io.
+
+### Editing
 
 1. Make a change to a file
 2. Add and commit.
@@ -56,7 +85,7 @@ How to publish the blog on IPFS.io
 7. Get it merged following review from _another_ member.
 8. `$ git checkout master && git pull origin master`
 
-#### Publishing
+### Publishing
 
 7. `$ ipfs daemon`
 8. `$ make publish`
@@ -71,10 +100,16 @@ How to publish the blog on IPFS.io
 
 You will need access to DigitalOcean for this to work. You will then need to use the token. This will take a few minutes for DNS to propogate.
 
-### Theme
+## Contribute
 
-The layouts follow [the example viewer](https://github.com/ipfs/examples/tree/master/webapps/example-viewer). Modify the files inside
+Feel free to join in! PRs and [issues](https://github.com/ipfs/blog/issues) are welcome.
 
-```
-tmpl/
-```
+This repository falls under the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+
+### Want to hack on IPFS?
+
+[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
+
+## License
+
+MIT (c) Protocol Labs
